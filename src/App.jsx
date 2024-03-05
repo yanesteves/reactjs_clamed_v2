@@ -1,8 +1,15 @@
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import { useRef, useEffect, useState } from 'react'
+import { Titulo } from './styles/style'
 
 function App() {
+  const inputElement = useRef(null)
+  
+  useEffect(() => {
+    inputElement.current.focus()
+  }, [])
 
   return (
     <>
@@ -15,8 +22,12 @@ function App() {
         </a>
       </div>
 
-      <h1>Vite + React</h1>
-      
+      <Titulo customProperty='true'>Vite + React (styled-components)</Titulo>
+
+   
+
+      <input ref={inputElement} placeholder='Digite seu nome'></input>
+
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>

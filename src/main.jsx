@@ -6,8 +6,8 @@ import NFTStore from './pages/NFTStore/NFTStore.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    {/* <App /> */}
+    <App />
     {/* <NFTStore /> */}
-    <NFTStore />
+    {/* <NFTStore /> */}
   </React.StrictMode>,
 )
