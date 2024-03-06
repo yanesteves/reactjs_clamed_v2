@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import CardNFT from "../../components/NFTStoreComponents/CardNFT"
+import { ThemeContext } from '../../context/ThemeContext.jsx'
 
 export default function NFTStore() {
     let disponiveis = [
@@ -57,9 +58,16 @@ export default function NFTStore() {
         },
     ]
 
+    const { theme, toggleTheme }= useContext(ThemeContext)
+
     const [categoria, setCategoria] = useState('todos')
     // para receber os dados filtrados
     const [nfts, setNFTs] = useState(disponiveis)
+
+
+    useEffect(() => {
+        console.log('Tema atual: ', theme)
+    }, [theme])
 
     useEffect(() => {
         // setNFTs(disponiveis)
@@ -95,6 +103,7 @@ export default function NFTStore() {
                     <button onClick={() => setCategoria('ilustracao')}>Ilustração</button>
                     <button onClick={() => setCategoria('musica')}>Música</button>
                     <button onClick={() => setCategoria('games')}>Games</button>
+                    <button onClick={toggleTheme}>Alterar Tema</button>
                 </div>
             </div>        
 
