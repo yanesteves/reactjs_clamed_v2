@@ -1,19 +1,18 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
-import NFTStore from './pages/NFTStore/NFTStore.jsx'
+import { BrowserRouter as Router } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext.jsx'
+import RoutesComponent from './routes/Routes.jsx'
+import './index.css'
+import { MenuComponent } from './components/OtherComponents/MenuComponent.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ThemeProvider>
-      <NFTStore />
+      <Router>
+        <MenuComponent />
+        <RoutesComponent />        
+      </Router>      
     </ThemeProvider>
-
-    
-    {/* <App /> */}
-    {/* <NFTStore /> */}
-    {/* <NFTStore /> */}
   </React.StrictMode>,
 )
