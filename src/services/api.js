@@ -1,5 +1,17 @@
 const BASE_URL = 'https://api.exemplo.com/products'
 
+export const apiLogin = (username, password) => {
+    if (username === 'user' && password === 'pass') {
+        return {
+            success: true,
+            token: 'jwt',
+            user: { id: 1, name: 'Yan Esteves', username }
+        }
+    } else {
+        throw new Error('Auth falhou.')
+    }
+}
+
 export const fetchData = async (termo) => {
     // Implementação do GET
     const response = await fetch(`https://api.github.com/search/users?q=${termo}`)

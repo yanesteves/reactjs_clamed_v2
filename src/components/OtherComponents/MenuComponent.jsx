@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import LogoutButton from './LogoutComponent'
 
 export const MenuComponent = () => {
     return (
@@ -15,6 +16,8 @@ export const MenuComponent = () => {
             <button>
                 <Link to='/instituicao/lab365'>LAB365</Link>
             </button>
+
+            <LogoutButton></LogoutButton>
         </div>
     )
 }
