@@ -4,6 +4,17 @@ export const Titulo = styled.h1`
     
 `
 
+export const Form = styled.form`
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    justify-content: space-evenly;
+    align-items: center;
+    * {
+        width: 240px;        
+    }
+`
+
 export const Span20 = styled.span`
     font-size: 20px;
 `
