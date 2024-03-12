@@ -29,6 +29,7 @@ export default function Login() {
 
     return (
         <div>
+            <h2>{import.meta.env.VITE_APP_NAME}</h2>
             <form onSubmit={handleSubmit}>
                 <input placeholder="Username" type="text" value={username} onChange={(e) => setUsername(e.target.value)}/>
                 <input placeholder="Password" type="password" value={password} onChange={(e) => setPassword(e.target.value)}/>

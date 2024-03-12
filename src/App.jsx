@@ -5,6 +5,7 @@ import { ThemeProvider } from './context/ThemeContext'
 import { useAuth } from './context/AuthContext'
 import { MenuComponent } from './components/OtherComponents/MenuComponent'
 import RoutesComponent from './routes/Routes'
+import Paginacao from './pages/Paginacao/Paginacao'
 
 function App() {
   const { isAuthenticated } = useAuth()
@@ -14,7 +15,8 @@ function App() {
       <ThemeProvider>
         <Router>
           {isAuthenticated && <MenuComponent />}
-          <RoutesComponent />
+          {/* <RoutesComponent /> */}
+          <Paginacao />
         </Router>
       </ThemeProvider>
     </>
